@@ -18,3 +18,4 @@ Welcome to the documentation for My API!
    :caption: Contents:
 
    Endpoints/index
+   README/index
