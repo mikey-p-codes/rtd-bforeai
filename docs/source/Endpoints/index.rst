@@ -74,3 +74,5 @@ To authenticate you can use the following Go code:
 
 		fmt.Printf("Username: %s\nToken: %s\n", responseAuth.Username, responseAuth.Token)
 	}
+
+The code sends a request to the API and recieves a response in JSON.  You can parse the response and print the username and the token.
