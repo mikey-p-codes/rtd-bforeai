@@ -8,7 +8,7 @@ BforeAi API Documentation
 =========================
 
 .. meta::
-   :description: The complete guide to using the My API.
+   :description: Quick start guide for interacting with the BforeAi API's.  This documentation was updated from a previous version at https://bfore.ai/docs.
    :keywords: api, documentation, python, javascript
 
 Welcome to the documentation for My API!
@@ -19,3 +19,4 @@ Welcome to the documentation for My API!
 
    Endpoints/index
    README/index
+   pythonAPI/index
