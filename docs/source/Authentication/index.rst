@@ -4,14 +4,14 @@
 Authentication and Token Management
 ================================
 
-BforeAi User and Token Managment
+BforeAI User and Token Managment
 
 .. _introduction:
 
 Introduction
 ------------
 
-The BforeAi API uses a Username and Password authentication scheme to log in and retrieve a Java Web Token (JWT).  This token is used to authenticate all subsequent requests to the API.  The token can be passed in the header of the request as a Bearer token.  The token can be set to expire after a certain amount of time, and the user will need to log in again to retrieve a new token.  A user may also log out and expire thier own token.
+The BforeAI API uses a Username and Password authentication scheme to log in and retrieve a Java Web Token (JWT).  This token is used to authenticate all subsequent requests to the API.  The token can be passed in the header of the request as a Bearer token.  The token can be set to expire after a certain amount of time, and the user will need to log in again to retrieve a new token.  A user may also log out and expire thier own token.
 
 .. _config:
 

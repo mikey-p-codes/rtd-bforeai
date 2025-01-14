@@ -9,14 +9,14 @@ Process Execution
 Introduction
 ------------
 
-This section details listing processes executed by the BforeAi API.  You can leverage this API to see a list of scored domains, drill down on a process that was exuted and get information regarding a monitored domain.
+This section details listing processes executed by the BforeAI API.  You can leverage this API to see a list of scored domains, drill down on a process that was exuted and get information regarding a monitored domain.
 
 .. _get_process_list:
 
 Get Process List
 ----------------
 
-This function retrieves a list of processes executed by the BforeAi API.
+This function retrieves a list of processes executed by the BforeAI API.
 
 .. _get_process_details:
 
