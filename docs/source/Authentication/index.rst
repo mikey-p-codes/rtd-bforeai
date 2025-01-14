@@ -6,12 +6,6 @@ Authentication and Token Management
 
 BforeAi User and Token Managment
 
-.. toctree::
-   :maxdepth: 5
-   :caption: Contents:
-    introduction
-    environment_variables
-
 .. _introduction:
 
 Introduction
@@ -23,6 +17,26 @@ The BforeAi API uses a Username and Password authentication scheme to log in and
 
 Environment Variables
 ---------------------
+
+To simplify setup, the use of environment variables is recommended.  You will be sending the token information in the header of the request many times, having it in an environment variable will make it easier to manage.
+
+.. code-block:: python
+    BASEURL = "https://api.bfore.ai/"
+
+    AUTH = {
+        "username": "YOUR_USERNAME",
+        "password": "YOUR_PASSWORD"
+    }
+
+    TOKEN ="YOUR_TOKEN"
+
+    CHANGE_PASSWORD = {
+        "username":"YOUR_USERNAME",
+        "old": "YOUR_OLD_PASSWORD",
+        "new": "YOUR_NEW_PASSWORD",
+        "confirm": "CONFIRM_NEW_PASSWORD"
+    }
+.. note: These variables are just an example, you can set them to whatever works best for you and your development environment.
 
 .. _test_unsecure:
 

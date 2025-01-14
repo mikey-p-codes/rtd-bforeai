@@ -1,4 +1,4 @@
-.. _Domain Information:
+.. _Domain_Information:
 
 ================================
 Gathering Domain Information and Generating Reports
