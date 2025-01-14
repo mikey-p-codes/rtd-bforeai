@@ -2,8 +2,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'BforeAi API Documentation'
-author = 'Patti@bfore.ai'
+project = 'BforeAI API Documentation'
+author = 'Michael@bfore.ai'
 release = '0.1'
 version = '0.1.0'
 
