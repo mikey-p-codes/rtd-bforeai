@@ -41,7 +41,9 @@ Simply create a file called `config.py` in the root of your project and add the 
     }
 
 
-.. note: These variables are just an example, you can set them to whatever works best for you and your development environment.
+.. note::
+
+    These variables are just an example, you can set them to whatever works best for you and your development environment.
 
 .. _test_unsecure:
 
