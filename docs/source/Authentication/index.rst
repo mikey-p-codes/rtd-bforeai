@@ -328,7 +328,7 @@ This function will let a user login and change their password. The user will nee
 |                        |    {                                     |
 |                        |        "Username":"<username>",          |
 |                        |        "old":"<YOUR_OLD_PASSWORD>" ,     |
-|                        |        "new":"<YOUR  NEW_PASSWORD>" ,    |
+|                        |        "new":"<YOUR_NEW_PASSWORD>" ,     |
 |                        |        "confirm":"<CONFIRM_NEW_PASSWORD>"|
 |                        |    }                                     |
 |                        |                                          |
