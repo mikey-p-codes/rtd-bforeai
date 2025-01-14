@@ -2,9 +2,11 @@
    sphinx-quickstart on Tue Oct 24 09:00:00 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-.. image:: https://drive.google.com/drive/folders/1iTX2sF14SlbOe34o9mg_isOjiezHJhdG
+
+.. image:: https://stg4.bfore.ai/wp-content/uploads/2024/05/bfore_logo_white_nb.png
    :alt: BforeAi Logo
    :align: left
+
 =========================
 BforeAi API Documentation
 =========================
@@ -16,7 +18,7 @@ BforeAi API Documentation
 BforeAi Python API Examples
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    Authentication/index
