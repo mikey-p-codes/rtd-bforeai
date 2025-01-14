@@ -125,7 +125,7 @@ You can confirm that your token is being accpeted by the platform by sending a r
 
 +------------------------+-----------------------------------------+
 | Endpoint               | https://api.bfore.ai/test/secure        |                        
-+------------------------+-----------------------------------------+
++========================+=========================================+
 | Request Header         | .. code-block:: json                    |
 |                        |                                         |
 |                        |    {                                    |
@@ -167,7 +167,7 @@ To expire a security token and logout, you can use the following code snippet.  
 
 +------------------------+-----------------------------------------+
 | Endpoint               | https://api.bfore.ai/user/logout        |
-+------------------------+-----------------------------------------+
++========================+=========================================+
 | Request Header         | .. code-block:: json                    |
 |                        |                                         |
 |                        |    {                                    |
@@ -207,7 +207,7 @@ To request a new security token, you can use the following code snippet.  This w
 
 +------------------------+-----------------------------------------+
 | Endpoint               | https://api.bfore.ai/user/token         |
-+------------------------+-----------------------------------------+
++========================+=========================================+
 | Request Header         | .. code-block:: json                    |
 |                        |                                         |
 |                        |    {                                    |
@@ -262,7 +262,7 @@ You can use the following code snippet to renew a security token.  This will ext
 
 +------------------------+-----------------------------------------+
 | Endpoint               | https://api.bfore.ai/user/renew         |
-+------------------------+-----------------------------------------+
++========================+=========================================+
 | Request Header         | .. code-block:: json                    |
 |                        |                                         |
 |                        |    {                                    |
