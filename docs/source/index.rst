@@ -20,3 +20,6 @@ BforeAi Python API Examples
    Authentication/index
    Domain Information/index
    Process Execution/index
+
+.. note::
+   You can find the source code for this documentation at [bforeai github placeholder]
