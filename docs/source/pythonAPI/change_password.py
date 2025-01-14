@@ -10,7 +10,7 @@ changePassword = {
     "confirm": "VrKSS1FPRYYFK12Ryfzhc0OYkuQ5tBQD"
 }"""
 
-def changePassword():
+def change_password():
     url = BASEURL + "user/password"
     headers = {
         "Content-Type": "application/json"
@@ -21,3 +21,5 @@ def changePassword():
     else:
         print("Error: ", response.status_code)
     return response.json()
+
+change_password()

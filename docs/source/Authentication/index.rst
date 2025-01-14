@@ -162,7 +162,7 @@ Expire Security Token and Logout
 To expire a security token and logout, you can use the following code snippet.  This will invalidate the token and require the user to log in again to retrieve a new token.
 
 +------------------------+-----------------------------------------+
-| Endpoint               | https://api.bfore.ai/user/logout        |                        
+| Endpoint               | https://api.bfore.ai/user/logout        |
 +------------------------+-----------------------------------------+
 | Request Header         | .. code-block:: json                    |
 |                        |                                         |
@@ -199,12 +199,149 @@ To expire a security token and logout, you can use the following code snippet.  
 Request New Security Token
 ---------------------------
 
+To request a new security token, you can use the following code snippet.  This will invalidate the current token and return a new token.
+
++------------------------+-----------------------------------------+
+| Endpoint               | https://api.bfore.ai/user/token         |
++------------------------+-----------------------------------------+
+| Request Header         | .. code-block:: json                    |
+|                        |                                         |
+|                        |    {                                    |
+|                        |        "Authorization":f"Bearer {TOKEN}"|
+|                        |    }                                    |
+|                        |                                         |
++------------------------+-----------------------------------------+
+|Parameters              + .. code-block:: json		               |
+|                        |                                         |
+|                        |    {                                    |
+|                        |        "m":int,		                   |
+|                        |        "d":int    		               |
+|                        |    }                                    |
+|                        |                                         |
++------------------------+-----------------------------------------+
+
+.. code-block:: python
+    import requests
+    from config import BASEURL, TOKEN
+
+    def request_new_token():
+    url = BASEURL + "user/token"
+    headers = {
+        "Authorization": f"Bearer {TOKEN}"
+    }
+    params = {
+        "m": "int", # number of minutes before the token expires
+        #or
+        "d": "int"  # number of days before the token expires
+    }
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 200:
+        response_data = response.json()
+        print("Token:", response_data.get("Token"))
+    else: 
+        print("Error: ", response.status_code)
+    return response.json()
+
+.. code-block:: bash
+    
+    $ python3 request_new_token.py
+    Token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9[....snip....]8OabCHwHjSIymw
+
+
 .. _renew_security_token:
 
 Renewing Security Token
 -----------------------
 
+You can use the following code snippet to renew a security token.  This will extend the expiration time of the token.
+
++------------------------+-----------------------------------------+
+| Endpoint               | https://api.bfore.ai/user/renew         |
++------------------------+-----------------------------------------+
+| Request Header         | .. code-block:: json                    |
+|                        |                                         |
+|                        |    {                                    |
+|                        |        "Authorization":f"Bearer {TOKEN}"|
+|                        |    }                                    |
+|                        |                                         |
++------------------------+-----------------------------------------+
+
+.. code-block:: python
+
+    import requests
+    from config import BASEURL, TOKEN
+
+    def renew_security_token():
+    url = BASEURL + "user/renew"
+    headers = {
+        "Authorization": f"Bearer {TOKEN}"
+    }
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        print(response.json())
+    else: 
+        print("Error: ", response.status_code)
+    return response.json()
+
+.. code-block:: bash
+    
+    $ python3 renew_security_token.py
+    {   'Authorizations': [   {   'Company': {   'Created': '0001-01-01T00:00:00',
+                                             'Deleted': '0001-01-01T00:00:00',
+                                             'Id': 1,
+                                             'Name': 'Bfore',
+                                             'Parent': {   'Created': '0001-01-01T00:00:00',
+                                                           'Deleted': '0001-01-01T00:00:00',
+                                                           'Id': 4}},
+                              'Roles': [{'Id': 1, 'Name': 'user'}]}],
+    'Created': '1999-09-09T14:56:14',
+    'Email': 'michael@bfore.ai',
+    'Firstname': 'Dreamcast',
+    'Id': '0',
+    'Lastname': '',
+    'PasswordExpiration': '0001-01-01T00:00:00',
+    'Properties': {},
+    'Token': 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.[...snip...]F4qvRMLU80GRISwNlAbFApiJujVIg',
+    'Username': 'michael@bfore.ai',
+    'access_token': 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.[....snip....]8OabCHwHjSIymw',
+    'expires_in': 0,
+    'token_type': 'bearer'}
+
+
 .. _change_password:
 
 Changing Password
 -----------------
+
+This function will let a user login and change their password. The user will need to provide their old password, and the new password they would like to use.  The user will also need to confirm the new password.
+
++------------------------+------------------------------------------+
+| Endpoint               | https://api.bfore.ai/user/password       |                        
++========================+==========================================+
+| JSON Request           | .. code-block:: json                     |
+|                        |                                          |
+|                        |    {                                     |
+|                        |        "Username":"<username>",          |
+|                        |        "old":"<YOUR_OLD_PASSWORD>" ,     |
+|                        |        "new":"<YOUR  NEW_PASSWORD>" ,    |
+|                        |        "confirm":"<CONFIRM_NEW_PASSWORD>"|
+|                        |    }                                     |
+|                        |                                          |
++------------------------+------------------------------------------+
+
+.. code-block:: python
+
+    import requests
+    from config import BASEURL, CHANGE_PASSWORD
+
+    def change_password():
+    url = BASEURL + "user/password"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    response = requests.post(url, headers=headers, json=CHANGE_PASSWORD)
+    if response.status_code == 200:
+        print(response.json())
+    else:
+        print("Error: ", response.status_code)
+    return response.json()
