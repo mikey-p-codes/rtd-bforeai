@@ -93,6 +93,7 @@ The following code snippet will login a user and return details about that user.
     return response.json()
 
 .. code-block:: bash
+    
     $ python3 login.py
     Username: michael@bfore.ai
     Token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9[....snip....]8OabCHwHjSIymw
