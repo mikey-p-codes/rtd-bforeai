@@ -76,6 +76,20 @@ User Authentication
 
 The following code snippet will login a user and return details about that user.  For simplicity we are just printing the response, but you can use the response to store the token in an environment variable.
 
+To properly build the request you will need the following
+
++------------------------+-----------------------------------+
+| Endpoint               | https://api.bfore.ai/user/login   |                        
++========================+===================================+
+| JSON Request           | .. code-block:: json              |
+|                        |                                   |
+|                        |    {                              |
+|                        |        "Username":"<username>",   |
+|                        |        "Password":"<password>"    |
+|                        |    }                              |
+|                        |                                   |
++------------------------+-----------------------------------+
+
 .. code-block:: python
 
     import requests
@@ -93,7 +107,7 @@ The following code snippet will login a user and return details about that user.
     return response.json()
 
 .. code-block:: bash
-    
+
     $ python3 login.py
     Username: michael@bfore.ai
     Token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9[....snip....]8OabCHwHjSIymw
