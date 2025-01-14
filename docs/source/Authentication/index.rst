@@ -21,6 +21,7 @@ Environment Variables
 To simplify setup, the use of environment variables is recommended.  You will be sending the token information in the header of the request many times, having it in an environment variable will make it easier to manage.
 
 .. code-block:: python
+
     BASEURL = "https://api.bfore.ai/"
 
     AUTH = {
@@ -36,6 +37,8 @@ To simplify setup, the use of environment variables is recommended.  You will be
         "new": "YOUR_NEW_PASSWORD",
         "confirm": "CONFIRM_NEW_PASSWORD"
     }
+
+
 .. note: These variables are just an example, you can set them to whatever works best for you and your development environment.
 
 .. _test_unsecure:
@@ -44,6 +47,8 @@ Testing Endpoint Availability
 -----------------------------
 
 To test the availability of the API, you can use the following code snippet:
+
+
 
 .. code-block:: python
 
@@ -61,7 +66,7 @@ To test the availability of the API, you can use the following code snippet:
 
 .. code-block:: powershell
 
-    PS C:\patti\bforeai> python3.exe test_unsecure.python
+    PS C:\patti\bforeai> python3.exe test_unsecure.py
     {'message': 'Hi anonymous'}
 
 .. _login:
