@@ -20,6 +20,8 @@ Environment Variables
 
 To simplify setup, the use of environment variables is recommended.  You will be sending the token information in the header of the request many times, having it in an environment variable will make it easier to manage.
 
+Simply create a file called `config.py` in the root of your project and add the following code:
+
 .. code-block:: python
 
     BASEURL = "https://api.bfore.ai/"
