@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: https://stg4.bfore.ai/wp-content/uploads/2024/05/bfore_logo_white_nb.png
+.. image:: https://bfore.ai/wp-content/uploads/2023/09/bfore_logo_nb.png
    :alt: BforeAi Logo
    :align: left
 
