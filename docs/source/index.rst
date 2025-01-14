@@ -16,9 +16,7 @@ BforeAi Python API Examples
 .. toctree::
    :maxdepth: 5
    :caption: Contents:
-
-   README/index
-   Setup/index
+   
    Authentication/index
    Domain Information/index
    Agatha/index
