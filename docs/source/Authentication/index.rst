@@ -117,10 +117,82 @@ To properly build the request you will need the following
 Testing Secure Endpoint Availability
 ------------------------------------
 
+You can confirm that your token is being accpeted by the platform by sending a request with your token as a bearer token in the header.  
+
++------------------------+-----------------------------------------+
+| Endpoint               | https://api.bfore.ai/test/secure        |                        
++------------------------+-----------------------------------------+
+| Request Header         | .. code-block:: json                    |
+|                        |                                         |
+|                        |    {                                    |
+|                        |        "Authorization":f"Bearer {TOKEN}"|
+|                        |    }                                    |
+|                        |                                         |
++------------------------+-----------------------------------------+
+
+.. code-block:: python
+
+    import requests
+    from config import BASEURL, TOKEN
+
+    def test_secure():
+    url = BASEURL + "test/secure"
+    headers = {
+        "Authorization": TOKEN,
+        "Content-Type": "application/json"
+    }
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        print(response.json())
+    else:
+        print("Error: ", response.status_code)
+    return response.json()
+
+.. code-block:: bash
+
+    $ python3 test_secure.py
+    {'message': 'Hi michael@bfore.ai'}
+
+
 .. _expire_security_token:
 
 Expire Security Token and Logout
 ---------------------------------
+
+To expire a security token and logout, you can use the following code snippet.  This will invalidate the token and require the user to log in again to retrieve a new token.
+
++------------------------+-----------------------------------------+
+| Endpoint               | https://api.bfore.ai/user/logout        |                        
++------------------------+-----------------------------------------+
+| Request Header         | .. code-block:: json                    |
+|                        |                                         |
+|                        |    {                                    |
+|                        |        "Authorization":f"Bearer {TOKEN}"|
+|                        |    }                                    |
+|                        |                                         |
++------------------------+-----------------------------------------+
+
+.. code-block:: python
+
+    import requests
+    from config import BASEURL, TOKEN
+
+    def expire_security_token():
+      headers = {
+            "Authorization": f"Bearer {TOKEN}"
+      }
+      url = BASEURL + "user/logout"
+      response = requests.get(url, headers=headers)
+      if response.status_code == 200:
+            print(response.json())
+      else:
+            print("Error: ", response.status_code)
+      return response.json()
+
+.. code-block:: bash
+
+    $ python3 expire_security_token.py
+    {'message': 'User logged out'}
 
 .. _request_new_token:
 
