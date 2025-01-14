@@ -1,4 +1,4 @@
-.. _login_get_token_py:
+.. _Authentication:
 
 ===============================
 Execute login and get the token
@@ -27,3 +27,4 @@ Authenticate and Get Token
 |                        |    }                              |
 |                        |                                   |
 +------------------------+-----------------------------------+
+
