@@ -43,6 +43,27 @@ To simplify setup, the use of environment variables is recommended.  You will be
 Testing Endpoint Availability
 -----------------------------
 
+To test the availability of the API, you can use the following code snippet:
+
+.. code-block:: python
+
+    import requests
+    from config import BASEURL
+
+    def test_unsecure():
+    url = BASEURL + "test/unsecure"
+    response = requests.get(url)
+    if response.status_code == 200:
+        print(response.json())  
+    else:
+        print("Error: ", response.status_code)
+    return response.json()
+
+.. code-block:: powershell
+
+    PS C:\patti\bforeai> python3.exe test_unsecure.python
+    {'message': 'Hi anonymous'}
+
 .. _login:
 
 User Authentication
