@@ -64,9 +64,9 @@ To test the availability of the API, you can use the following code snippet:
         print("Error: ", response.status_code)
     return response.json()
 
-.. code-block:: powershell
+.. code-block:: bash
 
-    PS C:\patti\bforeai> python3.exe test_unsecure.py
+    $ python3 test_unsecure.py
     {'message': 'Hi anonymous'}
 
 .. _login:
@@ -221,7 +221,7 @@ To request a new security token, you can use the following code snippet.  This w
 +------------------------+-----------------------------------------+
 
 .. code-block:: python
-    
+
     import requests
     from config import BASEURL, TOKEN
 
