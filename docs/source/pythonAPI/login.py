@@ -15,5 +15,6 @@ def login():
         print("Token:", response_data.get("Token"))
     else:
         print("Error: ", response.status_code)
+    return response.json()
 
 login()

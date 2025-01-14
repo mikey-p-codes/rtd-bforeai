@@ -74,6 +74,29 @@ To test the availability of the API, you can use the following code snippet:
 User Authentication
 -------------------
 
+The following code snippet will login a user and return details about that user.  For simplicity we are just printing the response, but you can use the response to store the token in an environment variable.
+
+.. code-block:: python
+
+    import requests
+    from config import BASEURL, AUTH
+
+    def login():
+    url = BASEURL + "user/login"
+    response = requests.post(url, json=AUTH)
+    if response.status_code == 200:
+        response_data = response.json()
+        print("Username:", response_data.get("Username"))
+        print("Token:", response_data.get("Token"))
+    else:
+        print("Error: ", response.status_code)
+    return response.json()
+
+.. code-block:: bash
+    $ python3 login.py
+    Username: michael@bfore.ai
+    Token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9[....snip....]8OabCHwHjSIymw
+
 .. _test_secure:
 
 Testing Secure Endpoint Availability
