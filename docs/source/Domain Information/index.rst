@@ -4,6 +4,8 @@
 Gathering Domain Information and Generating Reports
 ================================
 
+.. note:: This section is incomplete and will be updated as more information is gathered.
+
 API calls to gather information on domains and gather detail information on domains.
 
 .. _introduction:
@@ -62,5 +64,6 @@ Time is represented as linux epoch time.
 
 Note: The Linux epoch time for Jan 1, 1970, is 0.
 Today's date in Linux Epoch time is: 1736804009 (for example, if today is January 13 2025)
-.. note: It appears that if you attempt to go too far back you will get an internal server error.
+
+.. note:: It appears that if you attempt to go too far back you will get an internal server error.
 
